@@ -3,10 +3,12 @@ package com.test.automation.Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.test.automation.utils.Log;
+
 public class LoginPage {
     
     private WebDriver driver;
-
+    
     private By usernameField = By.name("username");
     private By passwordField = By.name("password");
     private By loginButton = By.xpath("//input[@value = 'Log In']");
@@ -26,6 +28,7 @@ public class LoginPage {
     }
 
     public void clickLogin(){
+        Log.info("Clicking Login button...");
         driver.findElement(loginButton).click();
     }
 
